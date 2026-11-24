@@ -1095,3 +1095,66 @@ button, a {
 .footer .footer-link:hover {
   color: #a84724;
 }
+
+/* LINKEDIN PROFESSIONAL BUTTON */
+
+.linkedin-button {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 19px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #0A66C2;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.linkedin-button svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.linkedin-arrow {
+  transition: transform 0.25s ease;
+}
+
+.linkedin-button:hover {
+  background: #cf670b;
+  color: #ffffff;
+  border-color: #050709;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.16);
+}
+
+.linkedin-button:hover svg {
+  transform: scale(1.08);
+}
+
+.linkedin-button:hover .linkedin-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 700px) {
+  .linkedin-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linkedin-button,
+  .linkedin-button svg,
+  .linkedin-arrow {
+    transition: none;
+  }
+}
