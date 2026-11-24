@@ -454,21 +454,35 @@ function App() {
           professional opportunities, feel free to reach out.
         </p>
 
-        <div className="contact-links">
-          <a href="mailto:mrishithilak@gmail.com">
-            <span>EMAIL</span>
-            mrishithilak@gmail.com ↗
-          </a>
-          <a href="tel:+918056502387">
-            <span>PHONE</span>
-            +91 80565 02387 ↗
-          </a>
+        
+<div className="contact-links">
+  <a href="mailto:mrishithilak@gmail.com">
+    <span>EMAIL</span>
+    mrishithilak@gmail.com ↗
+  </a>
+
+  <a href="tel:+918056502387">
+    <span>PHONE</span>
+    +91 80565 02387 ↗
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>LINKEDIN</span>
+    View Professional Profile ↗
+  </a>
+</div>
 
 <a
-  href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
-  target="_blank"
-  rel="noreferrer"
-><
+  href="mailto:mrishithilak@gmail.com?subject=AI%20Engineering%20Opportunity"
+  className="primary-button contact-button"
+>
+  Send an Email ↗
+</a>
+</section>
 <footer className="footer">
   <a href="#home" className="brand">
     RISHITHILAK M R<span>.</span>
