@@ -1085,3 +1085,13 @@ button, a {
     font-size: 14px;
   }
 }
+
+.footer .footer-link {
+  color: #ce602f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer .footer-link:hover {
+  color: #a84724;
+}

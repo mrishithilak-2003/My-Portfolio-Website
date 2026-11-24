@@ -441,23 +441,31 @@ function App() {
             <span>PHONE</span>
             +91 80565 02387 ↗
           </a>
-        </div>
 
-        <a
-          href="mailto:mrishithilak@gmail.com?subject=AI%20Engineering%20Opportunity"
-          className="primary-button contact-button"
-        >
-          Send an Email ↗
-        </a>
-      </section>
+<a
+  href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
+  target="_blank"
+  rel="noreferrer"
+><
+<footer className="footer">
+  <a href="#home" className="brand">
+    RISHITHILAK M R<span>.</span>
+  </a>
 
-      <footer className="footer">
-        <a href="#home" className="brand">
-          RISHITHILAK M R<span>.</span>
-        </a>
-        <p>© 2026 Rishithilak M R · AI Engineer</p>
-        <a href="#home">Back to top ↑</a>
-      </footer>
+  <p>© 2026 Rishithilak M R · AI Engineer</p>
+
+  <a
+    href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
+    target="_blank"
+    rel="noreferrer"
+    className="footer-link"
+  >
+    LinkedIn ↗
+  </a>
+
+  <a href="#home">Back to top ↑</a>
+</footer>
+
 
     </div>
   )
