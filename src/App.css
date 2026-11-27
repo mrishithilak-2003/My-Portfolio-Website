@@ -1244,3 +1244,257 @@ button, a {
 .personal-grid-single {
   grid-template-columns: minmax(0, 760px);
 }
+
+/* RESUME DOWNLOAD SUCCESS NOTIFICATION */
+
+.resume-toast {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 9999;
+  width: min(390px, calc(100vw - 32px));
+  padding: 23px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #e6ddd3;
+  border-left: 4px solid #cf5f30;
+  border-radius: 8px;
+  box-shadow: 0 14px 38px rgba(30, 25, 20, 0.15);
+  animation: resumeToastIn 0.35s ease-out;
+}
+
+.toast-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #fbede5;
+  border-radius: 50%;
+}
+
+.toast-icon span {
+  color: #cf5f30;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-content h3 {
+  color: #24211e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.toast-content p {
+  margin-top: 7px;
+  color: #514b43;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.toast-content a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #0A66C2;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.toast-content a:hover {
+  color: #cf5f30;
+}
+
+.toast-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+@keyframes resumeToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-toast {
+    right: 12px;
+    bottom: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-toast {
+    animation: none;
+  }
+}
+
+/* PREMIUM RESUME BUTTON HOVER INTERACTION */
+
+.hero-buttons .secondary-button {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #25211e;
+  border: 1px solid #d8cec3;
+  font-weight: 700;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-buttons .secondary-button span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+
+.hero-buttons .secondary-button:hover {
+  background: #e4773f;
+  color: #171411;
+  border-color: #e4773f;
+  font-weight: 800;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(196, 91, 43, 0.20);
+}
+
+/* Animated download arrow */
+
+.hero-buttons .secondary-button:hover span {
+  transform: translateY(4px);
+}
+
+/* Click feedback */
+
+.hero-buttons .secondary-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 9px rgba(196, 91, 43, 0.14);
+}
+
+/* Keyboard accessibility */
+
+.hero-buttons .secondary-button:focus-visible {
+  outline: 3px solid rgba(212, 102, 53, 0.35);
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-buttons .secondary-button,
+  .hero-buttons .secondary-button span {
+    transition: none;
+  }
+}
+ 
+/* PROFESSIONAL COMPANY LOGO FRAMES */
+
+.company-logo-frame {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e8e1d9;
+  border-radius: 8px;
+  align-self: flex-start;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.company-logo-frame img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 48px;
+  transition: transform 0.28s ease;
+}
+
+.flex-logo-frame img {
+  width: 125px;
+}
+
+.verticurl-logo-frame img {
+  width: 150px;
+}
+
+.company-logo-frame:hover {
+  transform: translateY(-3px);
+  border-color: #d9a58c;
+  box-shadow: 0 8px 20px rgba(40, 30, 20, 0.09);
+}
+
+.company-logo-frame:hover img {
+  transform: scale(1.04);
+}
+
+/* Mobile logo positioning */
+
+@media (max-width: 700px) {
+  .timeline-card {
+    position: relative;
+  }
+
+  .company-logo-frame {
+    position: absolute;
+    top: 23px;
+    right: 3px;
+    width: 88px;
+    height: 44px;
+    padding: 6px;
+  }
+
+  .flex-logo-frame img {
+    width: 75px;
+  }
+
+  .verticurl-logo-frame img {
+    width: 82px;
+  }
+
+  .company-logo-frame img {
+    max-height: 30px;
+  }
+
+  .timeline-date,
+  .timeline-card h3,
+  .timeline-card h4 {
+    padding-right: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-logo-frame,
+  .company-logo-frame img {
+    transition: none;
+  }
+}
+     

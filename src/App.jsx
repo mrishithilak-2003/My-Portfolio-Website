@@ -1,7 +1,6 @@
 
 import './App.css'
-
-
+import { useState } from 'react'
 const skillGroups = [
   {
     title: 'Programming Languages',
@@ -106,6 +105,17 @@ const projects = [
 ]
 
 function App() {
+
+  const [showResumeToast, setShowResumeToast] = useState(false)
+
+  const handleResumeDownload = () => {
+    setShowResumeToast(true)
+
+    window.setTimeout(() => {
+      setShowResumeToast(false)
+    }, 5000)
+  }
+
   return (
     <div className="portfolio">
 
@@ -161,9 +171,14 @@ function App() {
               Explore Projects <span>↗</span>
             </a>
 
-            <a href="/resume.pdf" className="secondary-button" download="Rishithilak_MR_Resume.pdf">
-              Download Resume <span>↓</span>
-            </a>
+           <a
+  href="/resume.pdf"
+  className="secondary-button"
+  download="Rishithilak_MR_Resume.pdf"
+  onClick={handleResumeDownload}
+>
+  Download Resume <span>↓</span>
+</a>
 
 <a
   href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
@@ -302,7 +317,12 @@ function App() {
                 <span>Vendor: Genius HR Tech</span>
               </div>
             </div>
-            <span className="timeline-index">01</span>
+            <div className="company-logo-frame flex-logo-frame">
+  <img
+    src="/images/companies/flex-logo.png"
+    alt="Flex company logo"
+  />
+</div>
           </article>
 
           <article className="timeline-card">
@@ -321,7 +341,12 @@ function App() {
                 <span>Vendor: TeamLease Services Ltd.</span>
               </div>
             </div>
-            <span className="timeline-index">02</span>
+           <div className="company-logo-frame verticurl-logo-frame">
+  <img
+    src="/images/companies/verticurl-logo.png"
+    alt="Verticurl company logo"
+  />
+</div>
           </article>
         </div>
       </section>
@@ -509,6 +534,38 @@ function App() {
 
   <a href="#home">Back to top ↑</a>
 </footer>
+
+{showResumeToast && (
+  <div className="resume-toast" role="status">
+
+    <div className="toast-icon">
+      <span>✓</span>
+    </div>
+
+    <div className="toast-content">
+      <h3>Resume download started</h3>
+
+      <p>Thank you for your interest in my profile.</p>
+
+      <a
+        href="https://www.linkedin.com/in/rishithilak-m-r-87b774451/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View LinkedIn Profile ↗
+      </a>
+    </div>
+
+    <button
+      className="toast-close"
+      onClick={() => setShowResumeToast(false)}
+      aria-label="Close notification"
+    >
+      ×
+    </button>
+
+  </div>
+)}
 
 
     </div>
