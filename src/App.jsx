@@ -409,7 +409,7 @@ function App() {
 <section id="personal-projects" className="content-section">
   <p className="section-label">05 / INDEPENDENT DEVELOPMENT</p>
   <h2>
-    Building beyond <span>professional work.</span>
+    Built beyond <span>professional work.</span>
   </h2>
 
   <div className="personal-grid personal-grid-single">
