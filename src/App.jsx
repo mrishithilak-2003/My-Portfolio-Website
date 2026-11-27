@@ -1,39 +1,57 @@
 
 import './App.css'
 
+
 const skillGroups = [
   {
-    title: 'Programming & Backend',
-    subtitle: 'Building application services and integrations',
-    skills: ['Python', 'SQL', 'FastAPI', 'REST APIs', 'Webhooks', 'Pydantic']
+    title: 'Programming Languages',
+    subtitle: 'Programming foundations',
+    skills: ['Python', 'SQL']
   },
   {
-    title: 'Generative AI & LLMs',
-    subtitle: 'Developing LLM-powered applications',
-    skills: ['LLM Integration', 'RAG', 'Prompt Engineering', 'Semantic Search', 'Text Generation']
+    title: 'Agentic AI & Frameworks',
+    subtitle: 'LLM orchestration and agent architectures',
+    skills: [
+      'LangChain', 'LangGraph', 'CrewAI',
+      'Multi-Agent Orchestration', 'Supervisor-Worker',
+      'ReAct', 'Sequential Agents', 'Human-in-the-Loop'
+    ]
   },
   {
-    title: 'Agentic AI Frameworks',
-    subtitle: 'Workflow orchestration and intelligent agents',
-    skills: ['LangChain', 'LangGraph', 'CrewAI', 'ReAct', 'Multi-Agent Workflows', 'Human-in-the-Loop']
+    title: 'Generative AI & LLM Platforms',
+    subtitle: 'Language models and generative AI techniques',
+    skills: [
+      'OpenAI GPT-4o', 'Azure OpenAI', 'Claude', 'Llama 3',
+      'RAG', 'Prompt Engineering', 'LLM Integration',
+      'Text Generation', 'Semantic Search'
+    ]
   },
   {
-    title: 'Models & Retrieval',
-    subtitle: 'Model integration and vector retrieval',
-    skills: ['OpenAI GPT-4o', 'Azure OpenAI', 'Claude', 'Llama 3', 'FAISS', 'ChromaDB']
+    title: 'Python Libraries & Vector Databases',
+    subtitle: 'Data processing and vector retrieval',
+    skills: [
+      'Pandas', 'NumPy', 'Pydantic', 'Requests',
+      'HTTPX', 'FAISS', 'ChromaDB'
+    ]
   },
   {
-    title: 'Data & Python Libraries',
-    subtitle: 'Processing, validation and structured data',
-    skills: ['Pandas', 'NumPy', 'Requests', 'HTTPX', 'PostgreSQL', 'MySQL', 'JSON', 'CSV']
+    title: 'Backend, Data & Databases',
+    subtitle: 'Application services and data integration',
+    skills: [
+      'FastAPI', 'REST APIs', 'Webhooks', 'JSON',
+      'CSV', 'Excel', 'Document Processing',
+      'PostgreSQL', 'MySQL'
+    ]
   },
   {
-    title: 'Tools & Engineering',
-    subtitle: 'Development, testing and deployment workflows',
-    skills: ['Git', 'GitHub', 'Docker', 'Linux', 'PyTest', 'API Testing', 'Response Validation']
+    title: 'Tools & Testing',
+    subtitle: 'Development tools and quality validation',
+    skills: [
+      'Git', 'GitHub', 'Docker', 'Linux',
+      'PyTest', 'API Testing', 'Response Validation'
+    ]
   }
 ]
-
 const projects = [
   {
     number: '01',
@@ -387,46 +405,36 @@ function App() {
         </div>
       </section>
 
-      <section id="personal-projects" className="content-section">
-        <p className="section-label">05 / INDEPENDENT DEVELOPMENT</p>
-        <h2>
-          Building beyond <span>professional work.</span>
-        </h2>
+      
+<section id="personal-projects" className="content-section">
+  <p className="section-label">05 / INDEPENDENT DEVELOPMENT</p>
+  <h2>
+    Building beyond <span>professional work.</span>
+  </h2>
 
-        <div className="personal-grid">
-          <article className="personal-card">
-            <span>AI-ASSISTED IT SUPPORT</span>
-            <h3>SupportIQ</h3>
-            <p>
-              An AI-assisted IT support and incident investigation project
-              exploring RAG-based troubleshooting, knowledge retrieval,
-              agent workflows and automation using Flowise, CrewAI and n8n.
-            </p>
-            <div className="skill-tags">
-              {['RAG', 'Flowise', 'CrewAI', 'n8n', 'Docker'].map(x =>
-                <span key={x}>{x}</span>
-              )}
-            </div>
-            <span className="project-status">Independent portfolio project</span>
-          </article>
+  <div className="personal-grid personal-grid-single">
+    <article className="personal-card">
+      <span>AI-ASSISTED IT SUPPORT</span>
+      <h3>SupportIQ</h3>
+      <p>
+        An AI-assisted IT support and incident investigation project
+        exploring RAG-based troubleshooting, knowledge retrieval,
+        agent workflows and automation using Flowise, CrewAI and n8n.
+      </p>
 
-          <article className="personal-card">
-            <span>AI-POWERED REQUEST MANAGEMENT</span>
-            <h3>PolicyPilot</h3>
-            <p>
-              A Python-based employee request assistant exploring request
-              classification, information summarization and next-step
-              recommendations through FastAPI, Pydantic and SQLite.
-            </p>
-            <div className="skill-tags">
-              {['Python', 'FastAPI', 'Pydantic', 'SQLite', 'REST APIs'].map(x =>
-                <span key={x}>{x}</span>
-              )}
-            </div>
-            <span className="project-status">Independent portfolio project</span>
-          </article>
-        </div>
-      </section>
+      <div className="skill-tags">
+        {['RAG', 'Flowise', 'CrewAI', 'n8n', 'Docker'].map(x =>
+          <span key={x}>{x}</span>
+        )}
+      </div>
+
+      <span className="project-status">
+        Independent portfolio project
+      </span>
+    </article>
+  </div>
+</section>
+
 
       <section id="education" className="content-section education-section">
         <p className="section-label">06 / EDUCATION</p>
